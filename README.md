@@ -8,6 +8,10 @@ The three axes mentioned above: **code** + **model** + **data** should be treate
 
 By encapsulating our entities in containers, we enable sharing resources on multi-tenant environments. Each task should run independently using its own provisioned dependencies. This level of isolation it's one of Kubernetes' features, making this system very appealing for this kind of workflows.
 
+## Recipes
+
+* TODO: Add a recipe describing how to extract Jupyter code and automatically generate deployable tasks.
+
 | Platform | Maintainer |
 |------|------|
 | Flyte | Lyft |
