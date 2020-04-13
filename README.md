@@ -6,3 +6,10 @@ Machine learning is progressively taking a central role in developing solutions.
 
 The three axes mentioned above: **code** + **model** + **data** should be treated as one immutable entity. Any change to this entity should be versioned making possible to share experiments at different stages. It should suffice to unpack any of these entities and rerun the experiment to reproduce the results obtained at any given time.
 
+
+| Platform | Maintainer |
+|------|------|
+| flyte | Lyft |
+
+
+
