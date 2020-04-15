@@ -28,7 +28,26 @@ Batch and Stream processing are not mutually exclusive. Batch systems can create
 * Provides _guarantee_ that data is produced to consumers in the order it was received
 * Provides guarantee that the events it stores are immutable and unchangeable
 
+### Stream Processing Application and Frameworks
 
+* Stream processing applications sit downstream of the data store
+* Stream processing applications ingest real-time event data from one or more data streams
+* Stream processing applications aggregate, join, and find differences in data from these streams
+* Common stream processing applications include:
+    * Confluent KSQL
+    * Kafka Streams
+    * Apache Flink
+    * Apache Samza
+    * Apache Spark Structure Streaming
+    * Faust Python Library
+
+### Benefits of Stream Processing
+
+* Faster for scenarios where a limited set of recent data is needed
+* More scalable due to distributed nature of storage
+* Provides a useful abstraction that decouples applications from each other
+* Allows one set of data to satisfy many use-cases which may not have been predictable when the dataset was originally created
+* Built-in ability to replay events and observe exactly what occurred, and in what order, providers more opportunities to recover from error states or dig into how a particular result was arrived at
 
 
 
