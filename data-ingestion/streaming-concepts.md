@@ -19,6 +19,10 @@ Batch and Stream processing are not mutually exclusive. Batch systems can create
 
 ## Components of a Stream Processing Solution
 
+### Streaming Data Store
+
+* May look like a _message queue_, as is the case with Apache Kafka
+* May look like a _SQL store_, as it the case with Apache Cassandra
 
 
 
