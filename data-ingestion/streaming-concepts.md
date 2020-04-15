@@ -23,6 +23,12 @@ Batch and Stream processing are not mutually exclusive. Batch systems can create
 
 * May look like a _message queue_, as is the case with Apache Kafka
 * May look like a _SQL store_, as it the case with Apache Cassandra
+* Responsible for holding all of the immutable event data in the system
+* Provides _guarantee_ that data is stored ordered according to the _time it was produced_
+* Provides _guarantee_ that data is produced to consumers in the order it was received
+* Provides guarantee that the events it stores are immutable and unchangeable
+
+
 
 
 
