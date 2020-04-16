@@ -50,7 +50,36 @@ Batch and Stream processing are not mutually exclusive. Batch systems can create
 * Built-in ability to replay events and observe exactly what occurred, and in what order, providers more opportunities to recover from error states or dig into how a particular result was arrived at
 
 
+## Log-structured storage
 
+### Common characteristics:
+
+* Consist of many **append-only logs** on disk
+* Files are periodically **merged**, or **joined together** into one file
+* Files are periodically **compacted**, where one or mode files is **deleted**, typically **based on age**.
+* Use many log files, instead of just one, which **increased speed** and reduces I/O **bottlenecks**
+
+### Examples of Log-Structured Storage
+
+Cassandra & HBase
+
+* Cassandra and HBase provide **SQL-like** interfaces
+* Use **append-only, log-structured streams**
+* Look and act like traditional SQL database to the end-user
+* Clusters may consist of thousands of distributed nodes
+* Popular for **batch workloads**
+
+Apache Kafka
+
+* Apache Kafka is a **message queue** base on log-structures, append-only storage
+* Scales to thousands of distributed nodes
+* Popular for **Stream Processing**
+
+## Append-only logs
+
+* Append-only logs are text files in which incoming events are written to the end of the log as they are received
+* This simple concept --of only ever appending, or adding data to the end of a log file-- is what allows streaming processing applications to ensure that events are ordered correctly even at high throughput and scale
+* We can take this idea a step farther, and say that in fact streams are append-only logs 
 
 
 
