@@ -79,7 +79,25 @@ Apache Kafka
 
 * Append-only logs are text files in which incoming events are written to the end of the log as they are received
 * This simple concept --of only ever appending, or adding data to the end of a log file-- is what allows streaming processing applications to ensure that events are ordered correctly even at high throughput and scale
-* We can take this idea a step farther, and say that in fact streams are append-only logs 
+* We can take this idea a step farther, and say that in fact streams are append-only logs.
+
+## Log-structures streaming
+
+* Log-structured streams build upon the concept of append-only logs. One of the hallmarks of log-structures storage systems is that at their core they utilize append-only logs.
+
+* Common characteristic of all log-structured storage systems are that they simply append data to log files on disk.
+
+* These log files may store data indefinitely, for a specific time period, or until a specific size is reached.
+
+* There are typically many log files on disk, and these log files are merged and compacted occasionally.
+
+* When a log file is compacted it means that data from one or more files is deleted. Deletion is typically determined by the age of a record. The oldest records are removed, while the newest stay.
+
+## Log-structured Storage
+
+* One of the key innovations over the past decade in computing has been the emergence of log-structured storage as a primary means of storing data.
+
+
 
 
 
