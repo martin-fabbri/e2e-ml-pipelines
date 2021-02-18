@@ -3,9 +3,10 @@ import math
 import pickle
 
 import pandas as pd
+from config import Config
 from sklearn.metrics import mean_squared_error
 
-from config import Config
+Config.EVALUATION_PATH.mkdir(parents=True, exist_ok=True)
 
 X_test = pd.read_csv(str(Config.FEATURES_PATH / "test_features.csv"))
 y_test = pd.read_csv(str(Config.FEATURES_PATH / "test_labels.csv"))
